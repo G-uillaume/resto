@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'BodoniFLF';
+    src: url('BodoniFLF-BoldItalic.eot');
+    src: url('BodoniFLF-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('BodoniFLF-BoldItalic.woff2') format('woff2'),
+        url('BodoniFLF-BoldItalic.woff') format('woff'),
+        url('BodoniFLF-BoldItalic.svg#BodoniFLF-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+

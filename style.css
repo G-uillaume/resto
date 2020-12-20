@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'BodoniFLF';
+    src: url('fonts/BodoniFLF-BoldItalic.eot');
+    src: url('fonts/BodoniFLF-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BodoniFLF-BoldItalic.woff2') format('woff2'),
+        url('fonts/BodoniFLF-BoldItalic.woff') format('woff'),
+        url('fonts/BodoniFLF-BoldItalic.svg#BodoniFLF-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 249, 0.5);
+    padding: 20px;
+    height: 85px;
+    z-index: 1000;
+}
+
+nav a {
+    color: #000;
+    font-size: 30px;
+}
+
+nav a:hover {
+    color: #b45008;
+}
+
+nav a:after {
+    display: block;
+    content: '';
+    margin-top: 20px;
+    height: 3px;
+    border-radius: 50px;
+    background-color: #b45008;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+nav a:hover:after {
+    /* width: 100%; */
+    margin-top: 0;
+    opacity: 100%;
+}
+
+#home {
+    background-image: url('img/kitchen-731351_1920.jpg');
+    background-size: cover;
+    scroll-snap-align: start;
+}
+
+#titleBg {
+    background-color: rgba(255, 255, 249, 0.8);
+}
+
+h1 {
+   text-align: center;
+}
+
+.bodoni {
+    font-family: 'BodoniFLF', serif;
+}
+
+#welcome {
+    font-size: 32px;
+}
+
+#saveurs {
+    font-size: 128px;
+    color: #b45008;
+}
+
+#presentation {
+    min-height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+}
+
+#presentationLeft {
+    background-color: #b45008;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#presentationText {
+    background-color: #b45008;
+    width: 50%;
+}
+
+#presentationText h2 {
+    color: #e8bf65;
+    text-align: left;
+    font-size: 60px;
+}
+
+#presentationText p {
+    color: #fffff9;
+}
+
+#img1 {
+    background-image: url('img/meal-918638_1920.jpg');
+    background-size: cover;
+    background-position: center;
+    border-right: 10px solid #b45008;
+}
+
+#img2 {
+    background-image: url('img/appetizer-1386743_1920.jpg');
+    background-size: contain;
+    background-position: -80%;
+    border-bottom: 5px solid #b45008
+}
+
+#img3 {
+    background-image: url('img/drink-2571544_1920.jpg');
+    background-size: cover;
+    background-position: 40%;
+    border-top: 5px solid #b45008
+}
+
+#menu {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+#menuImg {
+    background-image: url('img/dinner-939434_1920.jpg');
+    background-size: cover;
+    background-position: left;
+}
+
+#menuCart {
+    background-color: #fffff9;
+}
+
+#menu h2 {
+    color: #b45008;
+    font-size: 48px;
+}
+
+#menuRight {
+    height: 580px;
+}
+
+#scrollMenu {
+    max-height: 53vh;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    box-shadow: 5px 5px 30px #ddd;
+    border-radius: 5px;
+}
+
+#scrollMenu h3 {
+    color: #e8bf65;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#scrollMenu .card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+#scrollMenu .card:last-child {
+    margin-bottom: 0;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    scroll-snap-align: start;
+    margin-bottom: 12px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.tag {
+    font-size: small;
+
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fa-leaf {
+    color: rgb(30, 105, 30);
+}
+
+.fa-shopping-basket, .price {
+    color: #b45008;
+}
+
+.price {
+    width: 60px;
+    text-align: center;
+}
+
+#horaires {
+    height: 100vh;
+    background-image: url('img/ouvertures.jpg');
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start;
+}
+
+#transparent {
+    background-color: rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+    flex-direction: row;
+}
+
+table {
+    border-left: 2px solid #b45008;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+thead {
+    text-align: center;
+}
+
+thead th {
+    color: #b45008;
+    font-size: 36px;
+    padding: 20px;
+}
+
+td {
+    color: #fffff9;
+    padding: 10px 50px;
+    text-align: center;
+}
+
+#adresse {
+    color: #fffff9;
+    font-size: 24px;
+    align-self: center;
+}
+
+.modal-card {
+    width: 50%;
+}
+
+.modal-card-body {
+    max-height: 230px;
+}
+
+.modal-card-content {
+    width: 25%;
+}
+
+.inputPanier {
+    width: 50px;
+    text-align: center;
+    outline: none;
+    text-align: right;
+}
+
+.prixPanier {
+    width: 12%;
+}
