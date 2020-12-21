@@ -14,7 +14,6 @@ html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     max-width: 100vw;
-
 }
 
 body {
@@ -138,8 +137,8 @@ h1 {
 
 #img2 {
     background-image: url('img/appetizer-1386743_1920.jpg');
-    background-size: contain;
-    background-position: -80%;
+    background-size: cover;
+    /* background-position: 80%; */
     border-bottom: 5px solid #b45008
 }
 
@@ -163,6 +162,7 @@ h1 {
 
 #menuCart {
     background-color: #fffff9;
+    min-height: 100vh;
 }
 
 #menu h2 {
@@ -171,7 +171,7 @@ h1 {
 }
 
 #menuRight {
-    height: 580px;
+    max-height: 580px;
 }
 
 #scrollMenu {
@@ -245,7 +245,7 @@ h1 {
 }
 
 #transparent {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
     min-height: 100vh;
     flex-direction: row;
 }
@@ -300,7 +300,13 @@ td {
     width: 12%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1025px) {
+    html {
+        scroll-snap-type: none;
+        scroll-behavior: smooth;
+        max-width: 100vw;
+    }
+    
     body {
         max-width: 100vw;
     }
@@ -375,30 +381,67 @@ td {
         opacity: 1;
     }
 
+    #welcome {
+        font-size: 28px;
+    }
+
+    #saveurs {
+        font-size: 80px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #titleBg {
+        width: 80vw;
+    }
+
     #presentationLeft {
         width: 100vw;
+    }
+
+    #presentationLeft h2 {
+        margin-top: 20px;
+    }
+
+    #presentationLeft p {
+        margin-bottom: 20px;
     }
 
     #presentationRight {
         display: none;
     }
 
+    #menu {
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
     #menuImg {
         display: none;
     }
 
-    #presentationLeft {
-        height: 100vh;
+    #presentation {
+        min-height: 100vh;
     }
 
-    #menuRight {
+    #menuCart {
+        max-height: 100vh;
         width: 80%;
     }
 
-    /* #transparent {
-        display: flex;
-        justify-content: center;
-    } */
+    #menuRight {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #menuRight h2 {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
 
     table {
         margin-left: 10px;
@@ -406,5 +449,25 @@ td {
 
     #frame {
         display: none;
+    }
+
+    .modal-card {
+        width: 100vw;
+    }
+
+    .carte {
+        padding-bottom: 20px;
+    }
+
+    .modal-card-image {
+        display: none;
+    }
+
+    .inputPanier {
+        width: 30px;
+    }
+
+    .deleteProduct {
+        padding: 3px 8px;
     }
 }
