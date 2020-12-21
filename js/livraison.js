@@ -78,13 +78,13 @@ const change = () => {
     const p = document.querySelector('#delivery')
     if (hours > 0) {
         console.log(hours + 'h' + minutes + 'm' + seconds)
-        p.textContent = 'Your order is being prepared, it will be delivered in ' + hours + 'h' + minutes + 'm' + seconds + 's.'
+        p.textContent = 'Votre commande sera livrée dans ' + hours + 'h' + minutes + 'm' + seconds + 's.'
     } else if (minutes > 0) {
         console.log(minutes + ':' + seconds)
-        p.textContent = minutes + 'm' + seconds + 's.'
+        p.textContent = 'Votre commande sera livrée dans ' + minutes + 'm' + seconds + 's.'
     } else {
         console.log(seconds)
-        p.textContent = seconds + 's.'
+        p.textContent = 'Votre commande sera livrée dans ' + seconds + 's.'
     }
     setTimeout(change, 1000)
 }

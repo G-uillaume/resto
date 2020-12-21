@@ -240,7 +240,7 @@ command.addEventListener('click', () => {
     p.id = 'delivery'
     panier.insertBefore(h2, carte)
     panier.insertBefore(p, carte)
-    h2.textContent = 'Thank you !'
+    h2.textContent = 'Merci !'
     const deleteProducts = document.querySelectorAll('.deleteProduct')
     for (let elem of deleteProducts) {
         elem.disabled = true
@@ -261,3 +261,23 @@ document.querySelector('.delete')
     .addEventListener('click', () => {
         document.querySelector('.modal').className = 'modal'
     })
+
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links a");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+});
+
+for (let link of links) {
+    link.addEventListener('click', () => {
+        navLinks.classList.toggle('open')
+        for (let x of links) {
+            x.classList.toggle('fade')
+        }
+    })
+}

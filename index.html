@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -14,12 +14,19 @@
 
 <body>
     <main>
-        <nav class="is-flex is-justify-content-space-around">
-            <a href="#home">ACCUEIL</a>
-            <a href="#presentation">À PROPOS</a>
-            <a href="#menu">MENU</a>
-            <a href="#horaires">INFOS PRATIQUES</a>
-            <a href="#" id="panier"><span class="icon is-large"><i class="fas fa-shopping-cart"></i></span>( 0 )</a>
+        <nav>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="nav-links">
+                <a href="#home">ACCUEIL</a>
+                <a href="#presentation">À PROPOS</a>
+                <a href="#menu">MENU</a>
+                <a href="#horaires">INFOS PRATIQUES</a>
+                <a href="#" id="panier"><span class="icon is-large"><i class="fas fa-shopping-cart"></i></span>( 0 )</a>
+            </div>
         </nav>
         <section class="hero is-fullheight" id="home">
             <div class="hero-body">
@@ -49,7 +56,7 @@
                     </p>
                 </div>
             </div>
-            <div class="column is-half columns p-0 m-0">
+            <div class="column is-half columns p-0 m-0" id="presentationRight">
                 <div class="column is-half  has-background-warning" id="img1">
                 </div>
                 <div class="column is-full columns p-0 m-0 is-multiline">
@@ -67,7 +74,6 @@
                         <button class="delete" aria-label="close"></button>
                     </header>
                     <section class="modal-card-body is-flex is-flex-direction-column">
-                        
                     </section>
                     <footer class="modal-card-foot is-flex is-justify-content-space-between">
                         <button id="command" class="button" disabled>Commander</button>
@@ -152,7 +158,7 @@
                         (+32) 499 / 99.99.99<br>
                         michon@michon.com
                     </p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.3201805871204!2d3.9517767157362074!3d50.45376217947583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c24ffd86711767%3A0x8d8ac5485271757!2sRue%20d&#39;Havr%C3%A9%2039%2C%207000%20Mons!5e0!3m2!1sfr!2sbe!4v1608486587470!5m2!1sfr!2sbe" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.3201805871204!2d3.9517767157362074!3d50.45376217947583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c24ffd86711767%3A0x8d8ac5485271757!2sRue%20d&#39;Havr%C3%A9%2039%2C%207000%20Mons!5e0!3m2!1sfr!2sbe!4v1608486587470!5m2!1sfr!2sbe" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" id="frame"></iframe>
                 </div>
             </div>
         </section>
