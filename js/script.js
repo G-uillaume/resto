@@ -254,7 +254,10 @@ command.addEventListener('click', () => {
     for (let elem of plusBtn) {
         elem.disabled = true
     }
-    change()
+    
+    let x = livraison() // j'enferme la valeur de deliveryTime dans x car j'ai besoin qu'elle reste fixe
+
+    change(x)
     command.disabled = true
 })
 

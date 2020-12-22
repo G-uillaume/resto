@@ -1,6 +1,5 @@
 const livraison = () => {
     let now = new Date()
-    // let timeToNextOpening // CALCUL MAGIQUE PRISE DE TÊTE
     let openDelay = (Math.floor(Math.random() * (40 - 31) + 30)) * 60 * 1000 // 30mn + 0 à 10mn = 30 à 40mn
     let closeDelay = (Math.floor(Math.random() * (50 - 31) + 30)) * 60 * 1000 // 30 à 50mn
     let deliveryTime
@@ -37,7 +36,6 @@ const livraison = () => {
             openingHours.setSeconds(00)
             delayToOpening = openingHours.getTime() - now.getTime()
             deliveryTime = now.getTime() + delayToOpening + closeDelay
-            console.log(deliveryTime / (1000 * 60 * 60))
         } else if (now.getDay() === 0 && now.getHours() >= 14) { // dimanche après-midi
             console.log('dimanche apres midi')
             openingHours = now
@@ -53,12 +51,10 @@ const livraison = () => {
     }
     return deliveryTime
 }
-let x = livraison() // j'enferme la valeur de deliveryTime dans x car j'ai besoin qu'elle reste fixe
 
-const change = () => {
+const change = (x) => {
     const now = new Date()
-    const there = x
-    const nowToThere = there - now.getTime() // nowToThere va diminuer à chaque seconde grâce au setTimeout, d'ou le besoin d'avoir x qui ne bouge pas, donc de l'avoir déclarer à l'extérieur de la fonction 
+    const nowToThere = x - now.getTime() // nowToThere va diminuer à chaque seconde grâce au setTimeout, d'ou le besoin d'avoir x qui ne bouge pas, donc de l'avoir déclarer à l'extérieur de la fonction 
     if (nowToThere <= 0) {
         return
     }
@@ -77,15 +73,11 @@ const change = () => {
     
     const p = document.querySelector('#delivery')
     if (hours > 0) {
-        console.log(hours + 'h' + minutes + 'm' + seconds)
         p.textContent = 'Votre commande sera livrée dans ' + hours + 'h' + minutes + 'm' + seconds + 's.'
     } else if (minutes > 0) {
-        console.log(minutes + ':' + seconds)
         p.textContent = 'Votre commande sera livrée dans ' + minutes + 'm' + seconds + 's.'
     } else {
-        console.log(seconds)
         p.textContent = 'Votre commande sera livrée dans ' + seconds + 's.'
     }
-    setTimeout(change, 1000)
+    setTimeout(() => change(x), 1000)
 }
-
