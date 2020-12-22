@@ -443,8 +443,20 @@ td {
         margin-bottom: 0;
     }
 
+    #transparent {
+        justify-content: space-around;
+    }
+
     table {
-        margin-left: 10px;
+        max-width: 100vw;
+    }
+
+    td {
+        padding-right: 0;
+    }
+
+    .hours p {
+        width: 90px;
     }
 
     #frame {
@@ -469,5 +481,11 @@ td {
 
     .deleteProduct {
         padding: 3px 8px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .card-image {
+        display: none;
     }
 }
