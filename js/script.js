@@ -20,7 +20,7 @@ const filterMenu = pattern => {
         }
     }
 
-    let total = 0
+    
 
     for (let carte of results) {
         const card = document.createElement('div')
@@ -211,6 +211,7 @@ const filterMenu = pattern => {
     }
 }
 let count = 0
+let total = 0
 
 window.addEventListener('load', () => {
     filterMenu('all')
