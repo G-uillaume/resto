@@ -1,6 +1,5 @@
 const filterMenu = pattern => {
     let results = [];
-    let arrPanier = []
 
     const scrollMenu = document.querySelector('#scrollMenu')
 
@@ -212,6 +211,7 @@ const filterMenu = pattern => {
 }
 let count = 0
 let total = 0
+let arrPanier = []
 
 window.addEventListener('load', () => {
     filterMenu('all')

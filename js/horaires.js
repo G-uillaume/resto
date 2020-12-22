@@ -4,7 +4,8 @@ const openClose = () => {
     const hours = now.getHours()
     const minutes = now.getMinutes()
     setTimeout(openClose, 1000)
-    if ((day > 1 && (((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14)) || ((hours >= 18 && hours < 22) || (hours === 22 && minutes < 30)))) || (day === 0 && ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14)))) {
+    if ((day > 1 && (((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14)) || ((hours >= 18 && hours < 22) || (hours === 22 && minutes < 30))))
+    || (day === 0 && ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14)))) {
         return true
     } else {
         return false
@@ -20,7 +21,7 @@ const changeTable = () => {
     let hours = now.getHours()
     let minutes = now.getMinutes()
     switch (now.getDay()) {
-        case 0:
+        case 0: // DIMANCHE
             if (openClose() && ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14))) {
                 lines[6].style.backgroundColor = 'rgba(82, 199, 82, 0.7)'
                 time[6].children[0].style.fontWeight = 'bold'
@@ -28,10 +29,10 @@ const changeTable = () => {
                 lines[6].style.backgroundColor = 'rgba(255, 0, 0, 0.7)'
             }
             break
-        case 1:
+        case 1: // LUNDI
             lines[0].style.backgroundColor = 'rgba(255, 0, 0, 0.7)'
             break
-        case 2:
+        case 2: // MARDI
             if (openClose() && ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14))) {
                 lines[1].style.backgroundColor = 'rgba(82, 199, 82, 0.7)'
                 time[1].children[0].style.fontWeight = 'bold'
@@ -42,7 +43,7 @@ const changeTable = () => {
                 lines[1].style.backgroundColor = 'rgba(255, 0, 0, 0.7)'
             }
             break
-        case 3:
+        case 3: // MERCREDI
             if (openClose() && ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14))) {
                 lines[2].style.backgroundColor = 'rgba(82, 199, 82, 0.7)'
                 time[2].children[0].style.fontWeight = 'bold'
@@ -53,7 +54,7 @@ const changeTable = () => {
                 lines[2].style.backgroundColor = 'rgba(255, 0, 0, 0.7)'
             }
             break
-        case 4:
+        case 4: // JEUDI
             if (openClose() && ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14))) {
                 lines[3].style.backgroundColor = 'rgba(82, 199, 82, 0.7)'
                 time[3].children[0].style.fontWeight = 'bold'
@@ -64,7 +65,7 @@ const changeTable = () => {
                 lines[3].style.backgroundColor = 'rgba(255, 0, 0, 0.7)'
             }
             break
-        case 5:
+        case 5: // VENDREDI
             if (openClose() && ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14))) {
                 lines[4].style.backgroundColor = 'rgba(82, 199, 82, 0.7)'
                 time[4].children[0].style.fontWeight = 'bold'
@@ -75,7 +76,7 @@ const changeTable = () => {
                 lines[4].style.backgroundColor = 'rgba(255, 0, 0, 0.7)'
             }
             break
-        case 6:
+        case 6: // SAMEDI
             if (openClose() && ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14))) {
                 lines[5].style.backgroundColor = 'rgba(82, 199, 82, 0.7)'
                 time[5].children[0].style.fontWeight = 'bold'
