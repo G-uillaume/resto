@@ -22,7 +22,7 @@ const changeTable = () => {
     let minutes = now.getMinutes()
     switch (now.getDay()) {
         case 0: // DIMANCHE
-            if (openClose() && ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14))) {
+            if ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14)) {
                 lines[6].style.backgroundColor = 'rgba(82, 199, 82, 0.7)'
                 time[6].children[0].style.fontWeight = 'bold'
             } else {
@@ -33,7 +33,7 @@ const changeTable = () => {
             lines[0].style.backgroundColor = 'rgba(255, 0, 0, 0.7)'
             break
         case 2: // MARDI
-            if (openClose() && ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14))) {
+            if ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14)) {
                 lines[1].style.backgroundColor = 'rgba(82, 199, 82, 0.7)'
                 time[1].children[0].style.fontWeight = 'bold'
             } else if ((hours >= 18 && hours < 22) || (hours === 22 && minutes < 30)) {
@@ -44,10 +44,10 @@ const changeTable = () => {
             }
             break
         case 3: // MERCREDI
-            if (openClose() && ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14))) {
+            if ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14)) {
                 lines[2].style.backgroundColor = 'rgba(82, 199, 82, 0.7)'
                 time[2].children[0].style.fontWeight = 'bold'
-            } else if (openClose() && ((hours >= 18 && hours < 22) || (hours === 22 && minutes < 30))) {
+            } else if ((hours >= 18 && hours < 22) || (hours === 22 && minutes < 30)) {
                 lines[2].style.backgroundColor = 'rgba(82, 199, 82, 0.7)'
                 time[2].children[1].style.fontWeight = 'bold'
             } else {
@@ -55,7 +55,7 @@ const changeTable = () => {
             }
             break
         case 4: // JEUDI
-            if (openClose() && ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14))) {
+            if ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14)) {
                 lines[3].style.backgroundColor = 'rgba(82, 199, 82, 0.7)'
                 time[3].children[0].style.fontWeight = 'bold'
             } else if ((hours >= 18 && hours < 22) || (hours === 22 && minutes < 30)) {
@@ -66,7 +66,7 @@ const changeTable = () => {
             }
             break
         case 5: // VENDREDI
-            if (openClose() && ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14))) {
+            if ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14)) {
                 lines[4].style.backgroundColor = 'rgba(82, 199, 82, 0.7)'
                 time[4].children[0].style.fontWeight = 'bold'
             } else if ((hours >= 18 && hours < 22) || (hours === 22 && minutes < 30)) {
@@ -77,7 +77,7 @@ const changeTable = () => {
             }
             break
         case 6: // SAMEDI
-            if (openClose() && ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14))) {
+            if ((hours === 11 && minutes >= 30) || (hours >= 12 && hours < 14)) {
                 lines[5].style.backgroundColor = 'rgba(82, 199, 82, 0.7)'
                 time[5].children[0].style.fontWeight = 'bold'
             } else if ((hours >= 18 && hours < 22) || (hours === 22 && minutes < 30)) {
@@ -88,6 +88,7 @@ const changeTable = () => {
             }
             break
     }
+    setTimeout(changeTable, 1000)
 }
 
 changeTable()

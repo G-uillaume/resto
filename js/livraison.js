@@ -17,7 +17,7 @@ const livraison = () => {
             openingHours.setSeconds(00)
             delayToOpening = openingHours.getTime() - now.getTime()
             deliveryTime = now.getTime() + delayToOpening + closeDelay
-        } else if ((now.getHours() < 11 && now.getMinutes() < 30) && now.getDay() !== 1) { // matin lundi exclu
+        } else if ((now.getHours() < 11 || (now.getHours() === 11 && now.getMinutes() < 30)) && now.getDay() !== 1) { // matin lundi exclu
             console.log('matin')
             openingHours = now
             openingHours.setHours(11)
